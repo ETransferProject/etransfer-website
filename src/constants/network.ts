@@ -10,7 +10,7 @@ export const BackEndNetWorkMap: Record<string, WebsiteNetworkConfig> = {
     dev: {
       name: 'aelf Testnet',
       networkType: 'TESTNET',
-      cmsUrl: 'https://testcms.etransfer.exchange/',
+      cmsUrl: 'https://testhome.etransfer.exchange/cms/', //'https://testcms.etransfer.exchange/',
       s3Url: 'https://etransfer-cms-dev.s3.ap-northeast-1.amazonaws.com/',
     },
     mainnet: {
