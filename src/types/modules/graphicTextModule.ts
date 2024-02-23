@@ -1,5 +1,5 @@
 import { ModuleType } from '.';
-import { ButtonComponent, CommonButtonComponent } from '../components/button';
+import { CommonButtonComponent } from '../components/button';
 import { DescriptionComponent } from '../components/description';
 import { ImageWrapper } from '../components/image';
 
@@ -17,7 +17,10 @@ export interface IGraphicTextModule {
   buttonList: Array<CommonButtonComponent>;
   type: GraphicTextModuleType; // default value is "LeftPicture_RightText"
   commonStyles: {
-    paddingVertical?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
+    mobilePaddingTop?: string;
+    mobilePaddingBottom?: string;
     defaultBackgroundColor?: string;
   };
 }

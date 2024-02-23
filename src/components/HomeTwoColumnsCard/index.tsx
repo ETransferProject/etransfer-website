@@ -65,15 +65,15 @@ export default function HomeTwoColumnsCard(props: HomeTwoColumnsCardProps) {
                   iconHeight={item?.iconHeight}
                   content={item.text || ''}
                   gap={item?.iconMarginRight}
+                  isLast={idx === contents.length - 1}
                 />
               </motion.div>
             );
           })}
 
-          <section className={styles.btnListWrap}>
-            {Array.isArray(buttonList) &&
-              buttonList?.length > 0 &&
-              buttonList.map((button, index) => {
+          {Array.isArray(buttonList) && buttonList?.length > 0 && (
+            <section className={styles.btnListWrap}>
+              {buttonList.map((button, index) => {
                 return (
                   <div className={styles.btnWrap} key={index}>
                     <motion.span variants={variant(contents.length * 0.5)}>
@@ -90,7 +90,8 @@ export default function HomeTwoColumnsCard(props: HomeTwoColumnsCardProps) {
                   </div>
                 );
               })}
-          </section>
+            </section>
+          )}
         </motion.div>
       </div>
     );
@@ -100,8 +101,8 @@ export default function HomeTwoColumnsCard(props: HomeTwoColumnsCardProps) {
     return (
       <CommonImage
         src={imgSrc}
-        width={500} // TODO
-        height={500} // TODO
+        width={500}
+        height={500}
         layout="intrinsic" // TODO
         className={clsx(['flex-row-center', imageClassName])}
         alt="infoImg"

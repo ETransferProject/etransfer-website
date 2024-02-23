@@ -8,19 +8,17 @@ interface IInfiniteScrollCarouselModuleProps {
   module: IInfiniteScrollCarouselModule;
 }
 
-const DEFAULT_PADDING_VERTICAL = 120;
-
 export default function InfiniteScrollCarouselModule({
   module: { commonStyles, title, carouselList },
 }: IInfiniteScrollCarouselModuleProps) {
   const { getVertical } = useGetVertical();
-  const { paddingVertical, defaultBackgroundColor } = commonStyles;
+  const { defaultBackgroundColor } = commonStyles;
   return (
     <section
       className={clsx('section-container', styles.infiniteScrollCarouselModuleWrapper)}
       style={{
-        paddingTop: getVertical(paddingVertical ?? DEFAULT_PADDING_VERTICAL) + 'px',
-        paddingBottom: getVertical(paddingVertical ?? DEFAULT_PADDING_VERTICAL) + 'px',
+        paddingTop: getVertical(commonStyles).top + 'px',
+        paddingBottom: getVertical(commonStyles).bottom + 'px',
         backgroundColor: defaultBackgroundColor,
       }}>
       {!!title?.text && <div className={styles.title}>{title.text}</div>}

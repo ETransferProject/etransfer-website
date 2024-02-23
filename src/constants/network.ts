@@ -8,16 +8,12 @@ export type WebsiteNetworkConfig = {
 export const BackEndNetWorkMap: Record<string, WebsiteNetworkConfig> = {
   ETransfer: {
     dev: {
-      name: 'aelf Testnet',
-      networkType: 'TESTNET',
       cmsUrl: 'https://testhome.etransfer.exchange/cms/', //'https://testcms.etransfer.exchange/',
-      s3Url: 'https://etransfer-cms-dev.s3.ap-northeast-1.amazonaws.com/',
+      s3Url: 'https://etransfer-dev.s3.ap-northeast-1.amazonaws.com/',
     },
     mainnet: {
-      name: 'aelf Mainnet',
-      networkType: 'MAIN',
       cmsUrl: 'https://cms.etransfer.exchange/',
-      s3Url: 'https://etransfer-cms.s3.ap-northeast-1.amazonaws.com/',
+      s3Url: 'https://etransfer.s3.ap-northeast-1.amazonaws.com/',
     },
   },
   // Add More ...
