@@ -9,6 +9,7 @@ export interface IGraphicTextModule {
   image: ImageWrapper;
   title?: {
     text: string;
+    subText?: string;
   };
   subTitle?: {
     text: string;
@@ -22,6 +23,7 @@ export interface IGraphicTextModule {
     mobilePaddingTop?: string;
     mobilePaddingBottom?: string;
     defaultBackgroundColor?: string;
+    fontColor?: string;
   };
 }
 
