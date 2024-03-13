@@ -75,6 +75,7 @@ export default function BrandModule({ type, moduleData }: BrandModuleProps) {
                 ) : (
                   <CommonButton
                     key={'BrandModule' + '_' + index + '_' + btn.key}
+                    className={styles.brandButton}
                     text={btn?.text || ''}
                     fontColor={btn.commonStyles.default?.fontColor}
                     backgroundColor={btn.commonStyles.default?.backgroundColor}

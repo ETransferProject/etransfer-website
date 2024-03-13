@@ -15,13 +15,13 @@ export default function InfiniteScrollCarouselModule({
   const { defaultBackgroundColor } = commonStyles;
   return (
     <section
-      className={clsx('section-container', styles.infiniteScrollCarouselModuleWrapper)}
+      className={clsx(styles.infiniteScrollCarouselModuleWrapper)}
       style={{
         paddingTop: getVertical(commonStyles).top + 'px',
         paddingBottom: getVertical(commonStyles).bottom + 'px',
         backgroundColor: defaultBackgroundColor,
       }}>
-      {!!title?.text && <div className={styles.title}>{title.text}</div>}
+      {!!title?.text && <div className={clsx('section-container', styles.title)}>{title.text}</div>}
       <InfiniteScrollCarousel carouselList={carouselList} />
     </section>
   );

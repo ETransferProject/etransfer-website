@@ -36,7 +36,7 @@ export default function InfiniteScrollCarousel({ carouselList }: IInfiniteScroll
           x: [0, -width],
           transition: {
             repeat: Infinity,
-            duration: width / 100,
+            duration: width / 60,
             ease: 'linear',
           },
         });
@@ -89,7 +89,8 @@ export default function InfiniteScrollCarousel({ carouselList }: IInfiniteScroll
           {renderCarouselItems()}
         </div>
       </motion.div>
-      <div className={styles.infiniteScrollCarouselMask} />
+      <div className={clsx(styles.infiniteScrollCarouselMask, styles.infiniteScrollCarouselMaskBefore)} />
+      <div className={clsx(styles.infiniteScrollCarouselMask, styles.infiniteScrollCarouselMaskAfter)} />
     </div>
   );
 }

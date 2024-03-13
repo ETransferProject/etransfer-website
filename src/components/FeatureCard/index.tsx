@@ -4,6 +4,7 @@ import CommonImage from '../CommonImage';
 import { IFeatureCardItem } from '@/types/modules/featureCardModule';
 import { s3Url } from '@/constants/network';
 import styles from './styles.module.scss';
+import useResponsive from '@/hooks/useResponsive';
 
 interface FeatureCardProps {
   className?: string;
@@ -22,17 +23,20 @@ export default function FeatureCard(props: FeatureCardProps) {
     style,
     item: { title, content, iconNormal, iconHover },
   } = props;
+  const { isMobile } = useResponsive();
   const [isHover, setIsHover] = useState(false);
 
   function onMouseOver() {
-    setIsHover(true);
+    if (!isMobile) {
+      setIsHover(true);
+    }
   }
   function onMouseOut() {
     setIsHover(false);
   }
   return (
     <div
-      className={clsx(styles.featureCardWrapper, className)}
+      className={clsx(styles.featureCardWrapper, isHover && styles.featureCardWrapperHover, className)}
       style={style}
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}>

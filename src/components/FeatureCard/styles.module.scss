@@ -7,16 +7,6 @@
   border-radius: 16px;
   width: 100%;
 
-  &:hover {
-    background: $brand !important;
-    .cardTitle {
-      color: $white-text;
-    }
-    .cardContent {
-      color: $white-text;
-    }
-  }
-
   .cardTitle {
     font-weight: 700;
     font-size: 22px;
@@ -51,6 +41,18 @@
       position: absolute;
       top: 0;
       left: 0;
+    }
+  }
+}
+
+.featureCardWrapperHover {
+  &:hover {
+    background: $brand !important;
+    .cardTitle {
+      color: $white-text;
+    }
+    .cardContent {
+      color: $white-text;
     }
   }
 }
