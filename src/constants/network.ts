@@ -13,7 +13,7 @@ export const BackEndNetWorkMap: Record<string, WebsiteNetworkConfig> = {
     },
     mainnet: {
       cmsUrl: 'https://cms.etransfer.exchange/',
-      s3Url: 'https://etransfer.s3.ap-northeast-1.amazonaws.com/',
+      s3Url: 'https://cms.etransfer.exchange/assets/',
     },
   },
   // Add More ...

@@ -19,6 +19,22 @@ module.exports = {
         protocol: 'https',
         hostname: 'etransfer.s3.ap-northeast-1.amazonaws.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'etransfer.exchange',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cms.etransfer.exchange',
+      },
+      {
+        protocol: 'https',
+        hostname: 'home.etransfer.exchange',
+      },
+      {
+        protocol: 'https',
+        hostname: 'testhome.etransfer.exchange',
+      },
     ],
   },
   sassOptions: {
